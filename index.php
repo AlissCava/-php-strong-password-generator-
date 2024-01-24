@@ -39,34 +39,17 @@ else
         <h1>PASSWORD GENERETOR</h1>
 
         <!-- Form per l'input della lunghezza della password -->
-        <form action="index.php" method="GET">
-            <label for="length">Lunghezza della Password:</label>
-
-            <!-- Input di tipo numero con vincoli di lunghezza -->
-            <input type="number" name="length" id="length" min="6" max="30" value="
-            <?php echo $passwordLength; ?>
-            " required>
-
+          <!-- Form per l'input della lunghezza della password -->
+          <form action="index.php" method="GET">
             <!-- Pulsante di invio del form -->
             <input type="submit" value="Genera Password">
         </form>
 
-        <!-- Visualizza la password generata solo se è stata generata -->
-
-        <?php 
-             if (isset($genPws)):
-        ?>
-
-        <!-- Paragrafo con la password generata in grassetto -->
-        <p><strong>Password Generata:</strong> 
-        <?php 
-            echo $generatedPassword; 
-        ?>
-        </p>
-
-        <?php 
-            endif; 
-        ?>
+        <!-- Visualizza la password generata -->
+        <?php if (!empty($genPws)): ?>
+            <p><strong>Password Generata:</strong> <?php echo $genPws                 ; ?></p>
+        <?php endif; ?>
+        
         
     </body>
 </html>
