@@ -1,19 +1,7 @@
 <?php
-// Funzione per generare una password casuale
-function genPsw ($leght)
-{
-    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?';
-    $password = '';
-
-    for ($i = 0; $i < $leght; $i++){
-        $password .= $characters[rand(0, strlen($characters) -1)];
-    }
-
-    return $password;
-}
 
 // Verifica se la lunghezza della password è specificata nella richiesta GET
-if (isset($_GET['lkegth']))
+if (isset($_GET['legth']))
 {
      // Imposta la lunghezza della password dalla richiesta GET
      $passwordLength = intval($_GET['legth']);
