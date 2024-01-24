@@ -1,5 +1,8 @@
 <?php
 
+// Includi il file con le funzioni
+include('functions.php');
+
 // Verifica se la lunghezza della password è specificata nella richiesta GET
 if (isset($_GET['legth']))
 {
